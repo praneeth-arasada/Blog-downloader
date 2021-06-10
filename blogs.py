@@ -61,7 +61,7 @@ def download_blog_from_xml(dir, url, xmldoc, utf):
                     else: 
                             # Fetch header first to get check content type
                             response = requests.head(link)
-                            # Content type can contain encoding information after a semi-colon (`;`), which we're not interested in
+                            # Content type can contain encoding information after a semi-colon (`;`)
                             content_type = response.headers.get('Content-Type').split(';')[0]
 
                             if content_type == 'text/html':
